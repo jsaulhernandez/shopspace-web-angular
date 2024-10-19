@@ -1,27 +1,34 @@
-# ShopspaceWebAngular
+# ShopspaceAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
+## Commands to install and run the application
 
-## Development server
+```
+npm install
+npm run start
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Folder structure (src/app)
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+    ## core: Todo lo que se necesita que cargue al inicio.
+        ### guards: servicios especiales que ayudan a otorgar o revocar el acceso a las rutas
+        ### interceptors: clases para interceptar o modificar solicitudes y respuestas
+        ### utils: funciones o ayudantes comunes
+    ## data: manejos de datos que son necesarios para la logica de la aplicación.
+        ### api: modelado de datos para la respuesta de los servicios
+        ### constants: archivos de constantes necesarias para componentes o otras areas
+        ### interfaces: necesarias para cualquier proceso que no incluya el modelado de los datos de respuesta de los servicios
+        ### models: modelos representativos para los datos de respuestas de los servicios
+        ### services: serie de servicios para el consumo de endpoints
+    ## layout: serie de elementos que conforman la plantilla base.
+        Ejemplo: Navbar, Body y Footer
+    ## modules: serie de areas de la logica del negocio.
+    ## shared: serie de elementos compartidos en toda la aplicación.
+        ### components
+        ### directives
+        ### pipes
+        ### services
+    ## store: contendra el o los manejadores de estado de la aplicación.
+        ### actions
+        ### effects
+        ### reducers
+        ### states
