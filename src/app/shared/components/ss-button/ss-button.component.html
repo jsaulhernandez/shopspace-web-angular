@@ -1,0 +1,31 @@
+<button
+  class="ss-button cursor-pointer"
+  [type]="type"
+  [disabled]="disabled"
+  [ngStyle]="{
+    'font-weight': fontWeight
+  }"
+  [ngClass]="{
+    'ss-button--primary': isPrimary,
+    'ss-button--secondary': isSecondary,
+    'ss-button--static': isStatic,
+    'ss-button--static-active': isStaticActive,
+    'ss-button--dark': isDark,
+    'ss-button--enabled': !disabled
+  }"
+>
+  <div class="ss-button-content">
+    <span
+      class="ss-button-content__icon"
+      [ngClass]="['icon-' + icon]"
+      *ngIf="isLeftIcon"
+    >
+    </span>
+    <ng-content></ng-content>
+    <span
+      class="ss-button-content__icon"
+      [ngClass]="['icon-' + icon]"
+      *ngIf="isRightIcon"
+    ></span>
+  </div>
+</button>

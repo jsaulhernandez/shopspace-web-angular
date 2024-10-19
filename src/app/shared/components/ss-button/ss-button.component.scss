@@ -1,0 +1,87 @@
+:host {
+  pointer-events: none;
+}
+
+.ss-button {
+  border-radius: 50px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 36px;
+  text-decoration: none;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  border: 0;
+  border-width: 1px;
+  border-style: solid;
+
+  &-content {
+    gap: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--enabled {
+    pointer-events: all;
+  }
+
+  &--primary,
+  &--secondary {
+    &:disabled {
+      pointer-events: none;
+      border-color: var(--senary-color);
+      color: var(--septenary-text-color);
+      background-color: var(--senary-color);
+    }
+  }
+
+  &--primary {
+    border-color: transparent;
+    color: var(--quaternary-text-color);
+    background-color: var(--primary-text-color);
+
+    &:hover,
+    &:focus {
+      background-color: var(--quinary-color);
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: var(--secondary-text-color);
+    border-color: var(--quinary-color);
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      color: var(--quaternary-text-color);
+      background-color: var(--primary-color);
+    }
+  }
+
+  &--static {
+    background-color: transparent;
+    color: var(--secondary-text-color);
+    border-color: var(--septenary-color);
+  }
+
+  &--static-active {
+    background-color: var(--primary-color);
+    color: var(--quaternary-text-color);
+    border-color: var(--primary-color);
+  }
+
+  &--dark {
+    background-color: var(--quinary-color);
+    color: var(--quaternary-text-color);
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: var(--primary-color);
+    }
+  }
+}

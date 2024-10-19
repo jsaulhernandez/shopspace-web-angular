@@ -1,0 +1,106 @@
+@import "variables/mixins";
+@import "variables/variables";
+
+.header {
+  z-index: 99;
+  position: relative;
+  height: $height-header;
+  border-bottom: 1px solid rgba(35, 31, 30, 0.2);
+  background-color: var(--secondary-color);
+
+  &-container {
+    &:nth-child(1) {
+      background-color: var(--primary-color);
+    }
+
+    &-content {
+      margin: 0 auto;
+      max-width: $max-container-width;
+
+      &-info,
+      &-main {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-info {
+        flex-wrap: wrap;
+        padding: 10px 0px;
+        gap: 10px;
+
+        &__item {
+          color: var(--secondary-color);
+          font-weight: 500;
+        }
+      }
+
+      &-main {
+        align-items: center;
+        padding: 15px 0px;
+        position: relative;
+
+        &-logo__image {
+          height: 40px;
+        }
+
+        &-container,
+        &-container-list {
+          display: flex;
+          flex-direction: column;
+        }
+
+        &-container {
+          gap: 10px;
+          position: absolute;
+          right: 0;
+          top: 72px;
+          padding: 20px;
+          align-items: center;
+          width: 100%;
+          background-color: var(--primary-color);
+
+          @include mq("md") {
+            gap: 35px;
+            flex-direction: row;
+            justify-content: space-between;
+            position: relative;
+            padding: 0;
+            top: 0;
+            width: auto;
+            background-color: var(--secondary-color);
+          }
+
+          &-list {
+            gap: 10px;
+            text-align: center;
+
+            @include mq("md") {
+              gap: 20px;
+              flex-direction: row;
+              text-align: justify;
+            }
+
+            &-item {
+              list-style: none;
+
+              &__text {
+                font-weight: 500;
+                line-height: 20px;
+                letter-spacing: 0.25px;
+                color: var(--quaternary-text-color);
+
+                @include mq("md") {
+                  color: var(--secondary-text-color);
+
+                  &:hover {
+                    color: var(--primary-text-color);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

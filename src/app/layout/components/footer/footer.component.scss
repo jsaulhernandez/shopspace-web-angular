@@ -1,0 +1,33 @@
+@import "variables/mixins";
+@import "variables/variables";
+
+.footer {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $max-container-width;
+
+  // &-first-block {
+  // }
+
+  &-second-block {
+    gap: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    line-height: 32px;
+    transition: all 0.2s;
+    padding: 33px 0px;
+    color: var(--senary-text-color);
+    border-top: 1px solid rgba(35, 31, 30, 0.2);
+
+    &__text {
+      flex: 0 auto;
+
+      &--developer {
+        font-weight: 700;
+      }
+    }
+  }
+}
