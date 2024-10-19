@@ -1,0 +1,62 @@
+@import "variables/variables";
+
+.ss-product-item {
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  max-width: 302px;
+
+  &-resource {
+    background-color: var(--tertiary-color);
+    border-radius: $border-radius;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+    &__image {
+      max-width: 100%;
+      transition: transform 0.4s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &-content {
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+
+    &-info {
+      display: flex;
+      justify-content: space-between;
+
+      &__name,
+      &__price {
+        color: var(--secondary-text-color);
+        font-size: 18px;
+      }
+
+      &__name {
+        font-weight: 600;
+      }
+
+      &__price {
+        font-weight: 700;
+
+        &--icon {
+          top: -5px;
+          font-size: 13px;
+          position: relative;
+        }
+      }
+    }
+
+    &__description {
+      font-size: 12px;
+      line-height: 16.5px;
+      color: var(--tertiary-text-color);
+    }
+  }
+}

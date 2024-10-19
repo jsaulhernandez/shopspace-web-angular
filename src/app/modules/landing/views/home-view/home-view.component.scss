@@ -1,14 +1,23 @@
 @import "variables/mixins";
+@import "variables/variables";
 
 .home-view {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: $gap-container;
+  padding-bottom: $gap-container;
 
   &-banner,
-  &-categories {
-    padding-left: 15px;
-    padding-right: 15px;
+  &-container {
+    padding-left: $padding-mobile;
+    padding-right: $padding-mobile;
+  }
+
+  &-banner-content,
+  &-container {
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
   }
 
   &-banner {
@@ -17,17 +26,16 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
 
     @include mq("md") {
-      padding-left: 50px;
-      padding-right: 50px;
+      padding-left: $padding-desktop;
+      padding-right: $padding-desktop;
     }
 
     &-content {
-      display: flex;
-      flex-direction: column;
       max-width: 430px;
-      gap: 30px;
 
       &__title {
         font-size: 44px;
@@ -44,14 +52,10 @@
     }
   }
 
-  &-categories {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-
+  &-container {
     @include mq("md") {
-      padding-left: 50px;
-      padding-right: 50px;
+      padding-left: $padding-desktop;
+      padding-right: $padding-desktop;
     }
 
     &__title {
@@ -61,7 +65,7 @@
       font-weight: 700;
     }
 
-    &-data {
+    &-categories {
       grid-column-gap: 23px;
       grid-row-gap: 16px;
       grid-template-rows: auto;
@@ -80,6 +84,9 @@
       @include mq("md") {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
       }
+    }
+
+    &-products {
     }
   }
 }
