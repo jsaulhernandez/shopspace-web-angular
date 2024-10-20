@@ -25,11 +25,42 @@
     </div>
   </div>
   <!-- last six products -->
-
   <div class="home-view-container">
     <span class="home-view-container__title">Todays Best Deals for you!</span>
     <div class="home-view-container-products">
       <app-swiper-products></app-swiper-products>
+    </div>
+  </div>
+  <!-- banner -->
+  <div
+    class="home-view-cash-back"
+    [ngStyle]="{
+      'background-image': 'url(assets/images/shopspace/informative.webp)'
+    }"
+  >
+    <div class="home-view-cash-back-content">
+      <div class="home-view-cash-back-content-info">
+        <span class="home-view-cash-back-content-info__title">
+          Get 5% Cash back on $200
+        </span>
+        <span class="home-view-cash-back-content-info__description">
+          Shopping is a bit of a relaxing hobby for me, which is sometimes
+          troubling for the bank balance.
+        </span>
+      </div>
+      <ss-button>Learn More</ss-button>
+    </div>
+  </div>
+  <!-- filters -->
+  <div class="home-view-container">
+    <span class="home-view-container__title">Todays Best Deals for you!</span>
+    <div class="home-view-container-filters">
+      <ss-button mode="static">Gadgets</ss-button>
+      <ss-button mode="static">Fashion</ss-button>
+      <ss-button mode="static">Toys</ss-button>
+    </div>
+    <div class="home-view-container-leaked-products">
+      <ss-product-item></ss-product-item>
     </div>
   </div>
 </div>
