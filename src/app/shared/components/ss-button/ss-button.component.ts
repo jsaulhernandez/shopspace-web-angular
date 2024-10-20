@@ -58,6 +58,10 @@ export class SsButtonComponent implements OnInit {
     return this.mode === 'dark';
   }
 
+  get isLight() {
+    return this.mode === 'light';
+  }
+
   getFontWeight() {
     switch (this.fontFamily) {
       case 'bold':

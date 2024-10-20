@@ -84,4 +84,16 @@
       background-color: var(--primary-color);
     }
   }
+
+  &--light {
+    background-color: transparent;
+    color: var(--quaternary-text-color);
+    border-color: var(--secondary-color);
+
+    &:hover,
+    &:focus {
+      background-color: var(--quinary-color);
+      border-color: var(--quinary-color);
+    }
+  }
 }
