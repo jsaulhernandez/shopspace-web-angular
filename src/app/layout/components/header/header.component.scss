@@ -9,8 +9,14 @@
   background-color: var(--secondary-color);
 
   &-container {
+    padding: 0 $padding-mobile;
+
     &:nth-child(1) {
       background-color: var(--primary-color);
+    }
+
+    @include mq("md") {
+      padding: 0 $padding-desktop;
     }
 
     &-content {
