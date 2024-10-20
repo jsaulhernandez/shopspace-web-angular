@@ -67,6 +67,7 @@
 
     &-categories,
     &-brands,
+    &-discount,
     &-leaked-products {
       grid-row-gap: 16px;
       grid-template-rows: auto;
@@ -91,7 +92,8 @@
       }
     }
 
-    &-brands {
+    &-brands,
+    &-discount {
       grid-column-gap: 23px;
       grid-template-columns: 1fr;
 
