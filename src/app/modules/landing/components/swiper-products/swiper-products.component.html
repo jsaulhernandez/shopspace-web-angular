@@ -1,4 +1,8 @@
-<swiper-container init="false" class="swiper-products">
+<swiper-container
+  init="false"
+  class="swiper-products"
+  [id]="'swiper-container-' + identifier"
+>
   <swiper-slide class="swiper-products-slide">
     <ss-product-item></ss-product-item>
   </swiper-slide>

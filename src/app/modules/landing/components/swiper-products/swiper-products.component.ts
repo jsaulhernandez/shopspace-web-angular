@@ -2,6 +2,7 @@ import {
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
   Inject,
+  Input,
   OnInit,
   PLATFORM_ID,
   signal,
@@ -21,14 +22,16 @@ import { SsProductItemComponent } from '@shared/components/ss-product-item/ss-pr
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class SwiperProductsComponent implements OnInit {
+  @Input() identifier: string = '1';
   swiperElement = signal<SwiperContainer | null>(null);
 
   constructor(@Inject(PLATFORM_ID) private platformID: Object) {}
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformID)) {
-      const swiperElementConstructor =
-        document.querySelector('swiper-container');
+      const swiperElementConstructor = document.querySelector(
+        `#swiper-container-${this.identifier}`
+      );
       const config: SwiperOptions = {
         slidesPerView: 1,
         spaceBetween: 24,
