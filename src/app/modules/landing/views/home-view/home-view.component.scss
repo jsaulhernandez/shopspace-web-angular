@@ -122,17 +122,18 @@
     }
   }
 
+  &-cash-back-content,
+  &-cash-back-content-info,
+  &-get-cash-back-content {
+    display: flex;
+    flex-direction: column;
+  }
+
   &-cash-back {
     padding: 95px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
-    &-content,
-    &-content-info {
-      display: flex;
-      flex-direction: column;
-    }
 
     &-content {
       max-width: 513px;
@@ -158,6 +159,55 @@
           font-size: 20px;
           font-weight: 400;
         }
+      }
+    }
+  }
+
+  &-get-cash-back {
+    gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 62px 40px;
+    background-color: var(--quaternary-color);
+
+    @include mq("md") {
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+
+    &-content {
+      gap: 18px;
+
+      &__text {
+        text-transform: capitalize;
+        font-size: 52px;
+        font-weight: 700;
+        color: var(--tertiary-text-color);
+      }
+
+      &__company {
+        font-weight: 500;
+        font-size: 20px;
+        color: var(--secondary-text-color);
+      }
+    }
+
+    &__image {
+      max-width: 190px;
+      display: none;
+
+      @include mq("sm") {
+        display: block;
+      }
+
+      @media only screen and (min-width: 830px) {
+        max-width: 245px;
+      }
+
+      @media only screen and (min-width: 1100px) {
+        max-width: 345px;
       }
     }
   }
