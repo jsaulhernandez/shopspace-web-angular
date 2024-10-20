@@ -66,6 +66,7 @@
     }
 
     &-categories,
+    &-brands,
     &-leaked-products {
       grid-row-gap: 16px;
       grid-template-rows: auto;
@@ -87,6 +88,19 @@
 
       @include mq("md") {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      }
+    }
+
+    &-brands {
+      grid-column-gap: 23px;
+      grid-template-columns: 1fr;
+
+      @include mq("xs") {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include mq("md") {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
       }
     }
 

@@ -1,0 +1,32 @@
+@import "variables/variables";
+
+.brand-item {
+  gap: 18px;
+  display: flex;
+  padding: 20px;
+  background-color: var(--tertiary-color);
+  border-radius: $border-radius;
+
+  &__image {
+    max-width: 70px;
+  }
+
+  &-content {
+    gap: 13px;
+    display: flex;
+    flex-direction: column;
+
+    &__name {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--secondary-text-color);
+    }
+
+    &__description {
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 13px;
+      color: var(--tertiary-text-color);
+    }
+  }
+}
