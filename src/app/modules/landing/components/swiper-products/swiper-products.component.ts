@@ -53,4 +53,8 @@ export class SwiperProductsComponent implements OnInit {
       this.swiperElement()?.initialize();
     }
   }
+
+  get includeMarginBottomToScroll() {
+    return false;
+  }
 }

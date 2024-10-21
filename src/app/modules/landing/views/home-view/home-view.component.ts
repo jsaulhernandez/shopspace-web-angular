@@ -7,6 +7,7 @@ import { BrandItemComponent } from '@landing/components/brand-item/brand-item.co
 import { SsProductItemComponent } from '@shared/components/ss-product-item/ss-product-item.component';
 import { SwiperProductsComponent } from '@landing/components/swiper-products/swiper-products.component';
 import { SavingItemComponent } from '../../components/saving-item/saving-item.component';
+import { ServiceItemComponent } from '../../components/service-item/service-item.component';
 
 @Component({
   selector: 'app-home-view',
@@ -14,11 +15,12 @@ import { SavingItemComponent } from '../../components/saving-item/saving-item.co
   imports: [
     CommonModule,
     SsButtonComponent,
+    SsProductItemComponent,
     CategoryItemComponent,
     BrandItemComponent,
-    SsProductItemComponent,
     SwiperProductsComponent,
     SavingItemComponent,
+    ServiceItemComponent,
   ],
   templateUrl: './home-view.component.html',
   styleUrl: './home-view.component.scss',

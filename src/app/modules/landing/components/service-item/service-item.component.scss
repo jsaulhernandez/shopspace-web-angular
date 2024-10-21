@@ -1,0 +1,51 @@
+@import "variables/variables";
+@import "variables/mixins";
+
+.service-item {
+  border-radius: $border-radius;
+  background-color: var(--tertiary-color);
+
+  &-content {
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+
+    @include mq("sm") {
+      padding-right: 70px;
+    }
+
+    &__title {
+      color: var(--tertiary-text-color);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 32px;
+      text-transform: capitalize;
+    }
+
+    &__description {
+      color: var(--secondary-text-color);
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  &-resource {
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    max-height: 260px;
+
+    &__image {
+      width: 100%;
+      vertical-align: middle;
+      display: inline-block;
+      transition: transform 0.4s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

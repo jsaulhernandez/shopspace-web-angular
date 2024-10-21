@@ -68,7 +68,8 @@
     &-categories,
     &-brands,
     &-discount,
-    &-leaked-products {
+    &-leaked-products,
+    &-services {
       grid-row-gap: 16px;
       grid-template-rows: auto;
       grid-auto-columns: 1fr;
@@ -118,6 +119,19 @@
 
       @include mq("md") {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
+
+    &-services {
+      grid-column-gap: 16px;
+      grid-template-columns: 1fr;
+
+      @include mq("xs") {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include mq("md") {
+        grid-template-columns: 1fr 1fr 1fr;
       }
     }
   }
@@ -171,6 +185,8 @@
     justify-content: space-between;
     padding: 62px 40px;
     background-color: var(--quaternary-color);
+    border-top-right-radius: calc($border-radius * 5);
+    border-bottom-left-radius: calc($border-radius * 5);
 
     @include mq("md") {
       padding-left: 120px;

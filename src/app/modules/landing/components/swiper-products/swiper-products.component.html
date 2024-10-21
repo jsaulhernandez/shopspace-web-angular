@@ -3,7 +3,11 @@
   class="swiper-products"
   [id]="'swiper-container-' + identifier"
 >
-  <swiper-slide class="swiper-products-slide">
+  <swiper-slide
+    [ngClass]="{
+      'swiper-products-slide': includeMarginBottomToScroll
+    }"
+  >
     <ss-product-item></ss-product-item>
   </swiper-slide>
 </swiper-container>
