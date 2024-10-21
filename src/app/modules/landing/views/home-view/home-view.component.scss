@@ -61,8 +61,12 @@
     &__title {
       color: var(--secondary-text-color);
       text-transform: capitalize;
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 700;
+
+      @include mq("md") {
+        font-size: 28px;
+      }
     }
 
     &-categories,
@@ -144,17 +148,25 @@
   }
 
   &-cash-back {
-    padding: 95px;
+    padding: 40px 15px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
+    @include mq("md") {
+      padding: 95px;
+    }
+
     &-content {
       max-width: 513px;
-      padding: 75px 64px;
+      padding: 40px 30px;
       background-color: var(--primary-color);
       gap: 50px;
       float: right;
+
+      @include mq("md") {
+        padding: 75px 64px;
+      }
 
       &-info {
         gap: 12px;
@@ -165,13 +177,21 @@
         }
 
         &__title {
-          font-size: 52px;
+          font-size: 28px;
           font-weight: 700;
+
+          @include mq("md") {
+            font-size: 52px;
+          }
         }
 
         &__description {
-          font-size: 20px;
+          font-size: 16px;
           font-weight: 400;
+
+          @include mq("md") {
+            font-size: 20px;
+          }
         }
       }
     }
@@ -198,9 +218,13 @@
 
       &__text {
         text-transform: capitalize;
-        font-size: 52px;
+        font-size: 38px;
         font-weight: 700;
         color: var(--tertiary-text-color);
+
+        @include mq("md") {
+          font-size: 52px;
+        }
       }
 
       &__company {
