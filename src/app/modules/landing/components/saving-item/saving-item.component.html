@@ -1,7 +1,17 @@
-<div class="saving-item">
+<div
+  class="saving-item"
+  [ngStyle]="{
+    backgroundColor: dominantColor
+  }"
+>
   <div class="saving-item-content">
     <span class="saving-item-content__text">Save</span>
-    <span class="saving-item-content__amount">
+    <span
+      class="saving-item-content__amount"
+      [ngStyle]="{
+        color: dominantColorText
+      }"
+    >
       <span class="saving-item-content__amount--icon"> $ </span>
       50
     </span>
@@ -11,6 +21,7 @@
   </div>
   <div class="saving-item-resource">
     <img
+      #image
       src="https://cdn.prod.website-files.com/63e857eaeaf853471d5335ff/63e8c4e6cd367817e964f756_sofa-min.png"
       loading="lazy"
       alt="save"
