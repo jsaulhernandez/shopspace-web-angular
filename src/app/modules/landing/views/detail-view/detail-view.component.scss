@@ -1,0 +1,19 @@
+@import "variables/mixins";
+@import "variables/variables";
+
+.detail-view {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-container;
+  padding-bottom: $gap-container;
+
+  &-breadcrumb {
+    padding-left: $padding-mobile;
+    padding-right: $padding-mobile;
+
+    @include mq("md") {
+      padding-left: $padding-desktop;
+      padding-right: $padding-desktop;
+    }
+  }
+}

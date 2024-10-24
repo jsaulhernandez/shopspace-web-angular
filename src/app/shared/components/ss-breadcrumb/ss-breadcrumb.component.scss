@@ -1,0 +1,39 @@
+.ss-breadcrumb {
+  background: none;
+  font-size: 20px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  flex-wrap: wrap;
+  padding: 25px 0;
+
+  &-item {
+    list-style: none;
+    margin: 5px 0;
+
+    &::after {
+      content: " / ";
+      color: var(--septenary-text-color);
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    &:last-child {
+      font-weight: 700;
+
+      &::after {
+        content: "";
+        margin: 0;
+      }
+    }
+
+    &:last-child &__text {
+      color: var(--tertiary-text-color);
+    }
+
+    &__text {
+      color: var(--septenary-text-color);
+    }
+  }
+}
