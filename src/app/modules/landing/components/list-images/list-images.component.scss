@@ -1,0 +1,52 @@
+@import "variables/variables";
+@import "variables/mixins";
+
+.images {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+
+  &-main {
+    padding: 20px;
+    border-radius: $border-radius;
+    background-color: var(--senary-color);
+    text-align: center;
+
+    &__image {
+      max-width: 100%;
+    }
+  }
+
+  &-content {
+    grid-row-gap: 16px;
+    grid-template-rows: auto;
+    grid-auto-columns: 1fr;
+    display: grid;
+    grid-column-gap: 16px;
+    grid-template-columns: 1fr 1fr;
+
+    @include mq("xs") {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    &-resource {
+      padding: 20px 10px;
+      border-radius: $border-radius;
+      background-color: var(--senary-color);
+      text-align: center;
+      overflow: hidden;
+      border: 2px solid transparent;
+
+      &:hover {
+        border-color: var(--primary-color);
+      }
+
+      &__image {
+        max-width: 100%;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
