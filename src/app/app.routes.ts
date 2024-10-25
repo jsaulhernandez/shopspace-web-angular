@@ -6,11 +6,11 @@ import { DetailViewComponent } from '@landing/views/detail-view/detail-view.comp
 import { FaqViewComponent } from '@landing/views/faq-view/faq-view.component';
 
 export const routes: Routes = [
-  {
-    path: '**',
-    redirectTo: 'shop-space/home',
-    pathMatch: 'full',
-  },
+  // {
+  //   path: '**',
+  //   redirectTo: 'shop-space',
+  //   pathMatch: 'full',
+  // },
   {
     path: '',
     redirectTo: 'shop-space/home',
@@ -25,7 +25,7 @@ export const routes: Routes = [
         component: HomeViewComponent,
       },
       {
-        path: 'product-detail',
+        path: 'product-detail/:product',
         component: DetailViewComponent,
       },
       {

@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import {
   ButtonMode,
   FontFamily,
   IconPosition,
-} from '../../../data/constants/shared.constants';
-import { CommonModule } from '@angular/common';
+} from '@shared/constants/shared.constants';
 
 @Component({
   selector: 'ss-button',
