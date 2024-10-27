@@ -31,6 +31,12 @@
     &:active {
       background-color: mix($primary-text-color, #000, 90%);
     }
+
+    &--disabled {
+      pointer-events: none;
+      color: var(--septenary-text-color);
+      background-color: var(--tertiary-color);
+    }
   }
 
   &__text {
