@@ -1,0 +1,25 @@
+.colors {
+  gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &-item,
+  &-item__background {
+    border-radius: 50%;
+  }
+
+  &-item {
+    border: 2px solid transparent;
+
+    &:hover {
+      border-color: var(--primary-color);
+    }
+
+    &__background {
+      width: 45px;
+      height: 45px;
+      background-color: var(--septenary-color);
+      border: 4px solid var(--secondary-color);
+    }
+  }
+}
