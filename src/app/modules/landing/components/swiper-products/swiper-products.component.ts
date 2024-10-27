@@ -1,4 +1,5 @@
 import {
+  AfterViewInit,
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
   Inject,
@@ -21,13 +22,15 @@ import { SsProductItemComponent } from '@shared/components/ss-product-item/ss-pr
   styleUrl: './swiper-products.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class SwiperProductsComponent implements OnInit {
+export class SwiperProductsComponent implements OnInit, AfterViewInit {
   @Input() identifier: string = '1';
   swiperElement = signal<SwiperContainer | null>(null);
 
   constructor(@Inject(PLATFORM_ID) private platformID: Object) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformID)) {
       const swiperElementConstructor = document.querySelector(
         `#swiper-container-${this.identifier}`
