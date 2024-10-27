@@ -1,0 +1,39 @@
+@import "theming/colors";
+
+.custom-quantity {
+  overflow: hidden;
+  display: flex;
+  background-color: var(--tertiary-color);
+  align-items: center;
+  border-radius: 25px;
+
+  &__icon,
+  &__text {
+    font-weight: 600;
+    padding: 10px 20px;
+    color: var(--primary-text-color);
+  }
+
+  &__icon {
+    font-size: 22px;
+    transition: background-color 100ms ease-in;
+
+    &:hover,
+    &:active {
+      transition: background-color 100ms ease-in;
+      color: var(--quaternary-text-color);
+    }
+
+    &:hover {
+      background-color: mix($primary-text-color, #fff, 90%);
+    }
+
+    &:active {
+      background-color: mix($primary-text-color, #000, 90%);
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+  }
+}
