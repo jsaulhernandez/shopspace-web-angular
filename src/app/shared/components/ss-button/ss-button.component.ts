@@ -31,11 +31,11 @@ export class SsButtonComponent implements OnInit {
   }
 
   get isLeftIcon() {
-    return this.iconPosition === 'left';
+    return this.iconPosition === 'left' && this.icon;
   }
 
   get isRightIcon() {
-    return this.iconPosition === 'right';
+    return this.iconPosition === 'right' && this.icon;
   }
 
   get isPrimary() {
