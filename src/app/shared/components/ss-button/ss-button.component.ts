@@ -62,6 +62,10 @@ export class SsButtonComponent implements OnInit {
     return this.mode === 'light';
   }
 
+  get isTertiary() {
+    return this.mode === 'tertiary';
+  }
+
   getFontWeight() {
     switch (this.fontFamily) {
       case 'bold':

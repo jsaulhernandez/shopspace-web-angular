@@ -62,6 +62,19 @@
     }
   }
 
+  &--tertiary {
+    background-color: transparent;
+    color: var(--primary-text-color);
+    border-color: var(--primary-color);
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      color: var(--quaternary-text-color);
+      background-color: var(--primary-color);
+    }
+  }
+
   &--static {
     background-color: transparent;
     color: var(--secondary-text-color);
